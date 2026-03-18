@@ -1,4 +1,6 @@
 import { useState } from "react";
+
+import logo from "./assets/logoi.png";
 import img1 from './assets/tshirt1.png';
 import img2 from './assets/tshirt2.png';
 import img3 from './assets/hoodie1.png';
@@ -41,7 +43,7 @@ export default function App() {
   return (
     <div style={styles.container}>
       <div style={styles.navbar}>
-        <h2 style={styles.logo}>👑 Samraj Wear</h2>
+       <img src={logo} alt="logo" style={styles.logoImg} />
         <span style={styles.tag}>Custom Print On Demand</span>
       </div>
 
@@ -106,6 +108,10 @@ export default function App() {
             })}
           </div>
         ))}
+        <div className="div">
+          <p>2 hours design preview</p>
+          <p>Customer order</p>
+        </div>
       </div>
 
       <div style={styles.footer}>© 2026 Samraj Wear</div>
@@ -114,8 +120,13 @@ export default function App() {
 }
 
 const styles = {
+  logoImg: {
+  width: "150px",
+  height: "150px",
+  borderRadius: "50%"
+},
   container: { background: "#0f172a", color: "white", fontFamily: "'Poppins', sans-serif", minHeight: "100vh", paddingBottom: "20px" },
-  navbar: { display: "flex", justifyContent: "space-between", padding: "12px 16px", flexWrap: "wrap", alignItems: "center" },
+  navbar: { display: "flex", justifyContent: "space-between", padding: "6px 10px", flexWrap: "wrap", alignItems: "center" },
   logo: { color: "#38bdf8", fontSize: "clamp(18px,4vw,28px)", fontWeight: "bold" },
   tag: { fontSize: "14px", opacity: 0.7 },
   hero: { textAlign: "center", padding: "20px 10px" },
