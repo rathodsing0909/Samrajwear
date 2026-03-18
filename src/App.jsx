@@ -24,6 +24,16 @@ export default function App() {
     const message = `Hi, I want a custom ${name}\nSize: ${size}\nDesign idea:\nAddress:\n(50% advance / 50% on delivery)`;
     const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
     window.open(url, "_blank");
+    const message2 = "Hello Samraj Wear! I want to order a custom T-shirt. Your order is received and we will update you within 2 hours about how your item will look.";
+
+const handleWhatsApp = () => {
+    window.open(`https://wa.me/${phone}?text=${encodeURIComponent(message2)}`, "_blank");
+}
+
+// Button in JSX
+<button onClick={handleWhatsApp} className="btn-whatsapp">
+  Order Now
+</button>
   };
 
   return (
