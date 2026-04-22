@@ -4,7 +4,6 @@ import logo from "./assets/logoi.png";
 import img1 from './assets/tshirt1.png';
 import img2 from './assets/tshirt2.png';
 import img3 from './assets/hoodie1.png';
-import img4 from './assets/dailycombo.png';
 
 
 export default function App() {
@@ -75,7 +74,7 @@ export default function App() {
                       : "0 5px 10px rgba(0,0,0,0.4)"
                   }}
                 >
-                  <img src={item.img} alt={item.name} style={styles.img} />
+                  <img src={item.img} alt={item.name} style={styles.img}/>
                   <h3>{item.name}</h3>
                   <p style={styles.price}>₹{item.price}</p>
 
